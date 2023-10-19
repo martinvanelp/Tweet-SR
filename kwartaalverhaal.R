@@ -30,7 +30,7 @@ data_bewerkt <- statline_data %>%
     cbs_add_date_column() %>%
     cbs_add_label_columns() %>%
     filter(Perioden_freq == "Q",
-           Perioden_Date >= as.Date("2013-01-01"))
+           Perioden_Date >= as.Date("2014-01-01"))
 
 # Input voor tekst maken ----
 staart_perioden <- tail(unique(data_bewerkt$Perioden_label), 2)
@@ -57,8 +57,10 @@ plot_data <- data_bewerkt |>
                    "SaldoPrimaireInkomensBruto_3"))
 
 plot_titel <- paste0("Het bruto nationaal inkomen was in het ", 
-                     huidig_kwartaal, " ", verschil_huidig, " miljoen ",
-                     huidig_richting, "\n dan het bruto binnenlands product, ",
+                     huidig_kwartaal, " ", bni_bedrag, 
+                     " miljard, en zodoende \n", 
+                     verschil_huidig, " miljoen ",
+                     huidig_richting, " dan het bruto binnenlands product, ",
                      "gecorrigeerd voor seizoen en werkdagen")
 
 p <- ggplot(plot_data,
