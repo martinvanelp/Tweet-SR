@@ -59,9 +59,9 @@ plot_data <- data_bewerkt |>
 plot_titel <- paste0("Het bruto nationaal inkomen was in het ", 
                      huidig_kwartaal, " ", bni_bedrag, 
                      " miljard, en zodoende \n", 
-                     verschil_huidig, " miljoen ",
+                     huidig_verschil, " miljoen ",
                      huidig_richting, " dan het bruto binnenlands product, ",
-                     "gecorrigeerd voor seizoen en werkdagen")
+                     "seizoen- en werkdaggecorrigeerd.")
 
 p <- ggplot(plot_data,
             aes(Perioden_Date, value, color = name)) +
@@ -80,7 +80,8 @@ p <- ggplot(plot_data,
         name = "",
         labels = c("Bruto binnenlands product",
                    paste0("Bruto nationaal inkomen"))) +
-    theme(legend.position = "bottom") +
+    theme(legend.position = "bottom",
+          plot.background = element_rect(fill = "white")) +
     
     # Caption
     labs(caption = "@martinvanelp, Bron: CBS Statline") +
