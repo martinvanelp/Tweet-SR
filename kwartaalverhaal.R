@@ -18,8 +18,8 @@ hoofdtekst <- strwrap("Volgens het @statistiekcbs is het BNI in het %s
                       width = 280)
 
 # Statline ----
-statline_meta <- cbs_get_meta("84101NED")
-statline_data <- cbs_get_data("84101NED",
+statline_meta <- cbs_get_meta("85886NED")
+statline_data <- cbs_get_data("85886NED",
                               SeizoenEnWerkdagcorrectie = "A042500",
                               select = c("Perioden",
                                          "SeizoenEnWerkdagcorrectie",
