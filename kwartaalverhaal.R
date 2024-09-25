@@ -42,7 +42,7 @@ huidig_kwartaal <- paste(
     substr(staart_perioden[2], 6, 16), "van",
     substr(staart_perioden[2], 1, 4))
 
-bni_bedrag <- format(round(staart_bbp[2]/1000, 1), 
+bni_bedrag <- format(round(staart_bni[2]/1000, 1), 
                      big.mark = ".", decimal.mark = ",")
 
 huidig_verschil <- format(abs(verschil[2]), big.mark = ".", decimal.mark = ",")
