@@ -10,9 +10,9 @@ library(ggplot2)
 library(ggthemes)
 
 # Hoofdtekst ----
-hoofdtekst <- strwrap("Volgens het @statistiekcbs is het BNI in het %s 
-                       uitgekomen op %s miljard, gecorrigeerd voor seizoen en 
-                       werkdagen. Dit is %s miljoen %s dan het BBP. Vorig
+hoofdtekst <- strwrap("Volgens het @cbsstatistiek.bsky.social is het BNI in het 
+                       %s uitgekomen op %s miljard, gecorrigeerd voor seizoen  
+                       en werkdagen. Dit is %s miljoen %s dan het BBP. Vorig
                        kwartaal was het BNI %s miljoen %s dan het BBP. 
                        #economie", 
                       width = 280)
